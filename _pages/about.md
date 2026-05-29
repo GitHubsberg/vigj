@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hello! I'm Vignesh, welcome to my webpage."
+title: "Hello! I'm Vignesh Jagathese, welcome to my webpage."
 redirect_from: 
   - /about/
   - /about.html
@@ -163,7 +163,7 @@ I am currently a Visiting Assistant Professor at North Dakota State University, 
   ];
 
   const imagesData = images.map(([filename, title, description]) => ({
-    src: `/images/carousel/${filename}`,
+    src: `{{ "/images/carousel/" | relative_url }}${filename}`,
     title,
     description
   }));

@@ -230,7 +230,7 @@ author_profile: true
 
     item.innerHTML = `
       <img
-        src="/images/Cat/${filename}"
+        src="{{ "/images/Cat/" | relative_url }}${filename}"
         alt="${caption}"
         loading="lazy"
       >
