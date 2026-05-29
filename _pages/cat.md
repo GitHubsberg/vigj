@@ -121,6 +121,7 @@ author_profile: true
 <div class="quilt-gallery" id="quilt-gallery"></div>
 
 <script>
+const baseUrl = "{{ site.baseurl }}";
 
   const images = [
     ["1.jpg", "on lap"],
@@ -230,7 +231,7 @@ author_profile: true
 
     item.innerHTML = `
       <img
-        src="{{ "/images/Cat/" | relative_url }}${filename}"
+        src="${baseUrl}/images/Cat/${filename}"
         alt="${caption}"
         loading="lazy"
       >

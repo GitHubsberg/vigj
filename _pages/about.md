@@ -116,7 +116,7 @@ I am currently a Visiting Assistant Professor at North Dakota State University, 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-
+const baseUrl = "{{ site.baseurl }}";
 //images in images/carousel. just add another triple here
   const images = [
     ["2018_SCTFinish.jpg", "Racing a Solar Car", "Bend, Oregon (2018)"],
@@ -163,7 +163,7 @@ I am currently a Visiting Assistant Professor at North Dakota State University, 
   ];
 
   const imagesData = images.map(([filename, title, description]) => ({
-    src: `{{ "/images/carousel/" | relative_url }}${filename}`,
+    src: `${baseUrl}/images/carousel/${filename}`,
     title,
     description
   }));
