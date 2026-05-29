@@ -197,27 +197,27 @@ const baseUrl = "{{ site.baseurl }}";
     wrapper.appendChild(slide);
   });
 
-  new Swiper(".random-carousel", {
-    loop: true,
-
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-
-    speed: 1200,
-
-    centeredSlides: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    keyboard: {
-      enabled: true,
-    },
-  });
- </script>
+  // Wait for Swiper to load before initializing
+  if (typeof Swiper !== 'undefined') {
+    new Swiper(".random-carousel", {
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 1200,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      keyboard: {
+        enabled: true,
+      },
+    });
+  } else {
+    console.error('Swiper library not loaded');
+  }
+</script>
 
 </div>
